@@ -22,9 +22,11 @@ const createElement = (tag, name, value) => {
                 let h1 = createElement("H1", "yadir-title", `${info.titulo} - ${info.categoria} - ${info.fecha}`);
                 let div = createElement("DIV", "yadir-container-index", h1);
                 let des = createElement("P", null, info.descripcion);
+                let det = createElement("P", "yadir-close", info.detalle);
                 let link = createElement("A", null, "Ver mas");
                 div.append(des);
-                div.append(link);
+                des.append(link);
+                div.append(det);
                 fragment.append(div);
             }
             parent.append(fragment);
@@ -32,7 +34,7 @@ const createElement = (tag, name, value) => {
     }
 }
 
-const indexDeport  = (url, id) =>{
+const indexGeneric  = (url, id) =>{
     const xhttp = new XMLHttpRequest();
     xhttp.open('GET', url);
     xhttp.send();
@@ -41,7 +43,11 @@ const indexDeport  = (url, id) =>{
             let datos = JSON.parse(this.responseText);
             let parent = document.getElementById(id);
             let fragment = new DocumentFragment();
-            
+            for(let info of datos){
+                let des = createElement("P", null, info.titulo);
+                let div = createElement("DIV", null, des);
+                fragment.append(div);
+            }
             parent.append(fragment);
         }
     }

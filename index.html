@@ -34,8 +34,13 @@
             <div id="yadir-main">
 
             </div>
-            <div id="yadir-main-deport">
-
+            <div id="yadir-main-other">
+                <div id="yadir-main-deport"> 
+                    <h1 class="yadir-title">Deporte</h1>
+                </div>
+                <div id="yadir-main-tecn"> 
+                    <h1 class="yadir-title">Tecnologia</h1>
+                </div>
             </div>
         </div>
     </div>
@@ -57,7 +62,8 @@
     <script src="js/index.js"></script>
     <script>
         index('http://demo6497253.mockable.io/noticias', 'yadir-main');
-        index('http://demo6497253.mockable.io/categoria/deporte', 'yadir-main-deport');
+        indexGeneric('http://demo6497253.mockable.io/categoria/deporte', 'yadir-main-deport');
+        indexGeneric('http://demo6497253.mockable.io/categoria/tecnologia', 'yadir-main-tecn');
     </script>
 </body>
 

@@ -20,6 +20,22 @@
     color:  #3b83ed;
 }
 
+.yadir-close{
+    display: none;
+}
+
+.yadir-grid p a{
+    color:  #3b83ed;
+    border: 1px solid #3b83ed;
+    background: transparent;
+    padding: .2em .5em;
+    border-radius: 1em;
+    cursor: pointer;
+    outline: none;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
 .yadir-grid{
     display: grid;
     grid-template-columns: auto 1fr;
@@ -30,10 +46,32 @@
     position: relative;
 }
 
-.yadir-grid div:nth-child(1){
+.yadir-grid #yadir-main{
     grid-area: A1;
 }
 
-.yadir-grid div:nth-child(2){
+.yadir-grid #yadir-main-other{
+    padding: 1em;
+    overflow: hidden;
     grid-area: A2;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.yadir-grid #yadir-main-deport,
+.yadir-grid #yadir-main-tecn{
+    border: 1px dotted gray;
+    padding: .5em;
+    margin-bottom: 1em;
+}
+
+.yadir-grid #yadir-main-deport p,
+.yadir-grid #yadir-main-tecn p{
+    width: 100%;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #3b83ed;
 }
