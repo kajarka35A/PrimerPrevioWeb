@@ -1,0 +1,39 @@
+.yadir-circle{
+    width: 50px;
+    height: 50px;
+    background: #3b83ed;
+    border: 1px solid red blue;
+    border-radius: 50%;
+}
+
+.yadir-container-index{
+    margin-top: 1em;
+}
+
+.yadir-container-index p{
+    border: 1px dotted gray;
+    padding: 1em;
+}
+
+.yadir-title{
+    font-size: 1.5em;
+    color:  #3b83ed;
+}
+
+.yadir-grid{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:"A1  A2"
+                        "A1  A2"
+                        "A1  A2";
+    position: relative;
+}
+
+.yadir-grid div:nth-child(1){
+    grid-area: A1;
+}
+
+.yadir-grid div:nth-child(2){
+    grid-area: A2;
+}
